@@ -1,0 +1,98 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.container {
+    display: flex;
+    gap: 40px;
+    height: inherit;
+}
+
+.content {
+    // display: flex;
+    // flex-direction: column;
+    flex-grow: 1;
+    overflow: hidden;
+    border: 20px solid transparent;
+//     background: rgb(235,238,253);
+// background: linear-gradient(0deg, rgba(235,238,253,0.3996192226890757) 0%, rgba(95,89,171,0.3968181022408963) 35%, rgba(0,0,244,0.3968181022408963) 100%);
+
+    .carousel {
+      flex-grow: 1;
+      overflow: visible;
+      height: 100%;
+      transition: transform 1s ease-in-out;
+    }
+
+    h2 {
+      font-size: 35px;
+    }
+
+    .info {
+      height: 100%;
+      flex-grow: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2rem;
+      font-weight: bold;
+      transition: opacity 0.8s ease-in-out;
+    }
+
+    // .info:nth-child(odd) {
+    //   background: #f4f4f4;
+    // }
+    
+    // .info:nth-child(even) {
+    //   background: #ddd;
+    // }
+}
+
+.sidebar {
+  display: flex;
+  padding: 10px 30px 0 0;
+  
+  ul {
+    list-style: none;
+    font-size: 25px;
+    line-height: 2;
+    li > a {
+      color: var(--color-primary);
+      text-decoration: none;
+      font-weight: 500;
+    }
+  }
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  // font-family: 'Genos';
+  font-weight: 600;
+
+  .header-block {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .name-box {
+    font-size: 70px;
+    line-height: .8;
+    padding: 15px 0px 20px 28px;
+  }
+
+  .job-box {
+    // background-color: var(--color-primary);
+background: linear-gradient(90deg, rgba(0,0,244,1) 0%, rgba(48,39,144,1) 100%);
+    color: var(--color-terciary);
+    font-size: 38px;
+    text-align: end;
+    padding: 10px 28px 20px 0px;
+
+    .title {
+      font-size: 50px;
+    }
+  }
+}

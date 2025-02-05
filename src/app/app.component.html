@@ -1,0 +1,53 @@
+<header class="header color-secondary">
+  <div class="header-block name-box">
+    <span>LUIS</span>
+    <span>PETRELLA</span>
+  </div>
+  <div class="header-block job-box">
+    <span class="title">Computer's Engineer</span>
+    <span>Former Web Developer</span>
+  </div>
+  
+  <!-- add socials as well -->
+  <!-- <li><a href="#">Donate Me!</a></li> -->
+</header>
+<div (wheel)="onScroll($event)" class="container">
+  <nav class="sidebar">
+    <ul>
+      <li><a href="#boutme">About Me</a></li>
+      <li><a href="#career">Career</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#hobbies">Things I like</a></li>
+      <li><a href="#design">Custom Design</a></li>
+      <!-- <li><a href="#">Donate Me!</a></li> -->
+    </ul>
+  </nav>
+  <main #main class="content">
+    <div #carousel class="carousel">
+      <section #info id="boutme" class="info">
+        <h2>About Me</h2>
+        <p>Content for section</p>
+      </section>
+      <section #info id="career" class="info">
+        <h2>Career</h2>
+        <p>Content for section</p>
+      </section>
+      <section #info id="contact" class="info">
+        <h2>Contact</h2>
+        <p>Content for section</p>
+      </section>
+      <section #info id="hobbies" class="info">
+        <h2>Things I like</h2>
+        <p>Content for section</p>
+      </section>
+      <section #info id="design" class="info">
+        <h2>Custom Design</h2>
+        <p>Content for section</p>
+      </section>
+    </div>
+  </main>
+</div>
+
+<!-- <a href="https://www.buymeacoffee.com/siul.e.petrella" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a> -->
+
+<router-outlet />
