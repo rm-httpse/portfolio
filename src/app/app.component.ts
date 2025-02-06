@@ -1,19 +1,13 @@
 import { Component, ElementRef, QueryList, ViewChild, ViewChildren } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-
-// window.addEventListener("wheel", (event) => {
-//   if (event.deltaY > 0) {
-//     goToSection(currentSection + 1);
-//   } else {
-//     
-//   }
-// });
-
+import { NavbarComponent } from "./components/navbar/navbar.component";
+import { ContentComponent } from "./components/content/content.component";
+import { FooterComponent } from "./components/footer/footer.component";
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrl: './app.component.scss',
+  imports: [NavbarComponent, ContentComponent, FooterComponent, SidebarComponent]
 })
 export class AppComponent {
   @ViewChildren('info') sections!: QueryList<ElementRef>;

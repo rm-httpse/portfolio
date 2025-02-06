@@ -1,0 +1,19 @@
+<aside class="w-72 h-full bg-gray-100 p-6 shadow-md">
+  <div class="text-center flex flex-col items-center justify-center">
+    <div class="w-24 h-24 mx-auto bg-gray-300 rounded-full"></div>
+     <!-- <img src="profile_pic.jpg" alt="Profile Picture" class="rounded-full w-38"> -->
+    <h2 class="mt-4 mb-2 text-xl font-semibold">{{ user.name.text }}</h2>
+    <p class="text-xs text-gray-600 text-left">{{ user.description.text }}</p>
+  </div>
+  <ul class="mt-6 space-y-2 text-sm">
+    <li><span href="#" class="flex items-center text-gray-700 cursor-default">{{ user.location.text }}</span></li>
+    <li><span href="#" class="flex items-center text-gray-700 cursor-default">{{ user.university.text }}</span></li>
+    
+    <li><a [href]="user.email.link" class="flex items-center text-gray-700 hover:text-blue-500">{{ user.email.text }}</a></li>
+    <li><a [href]="user.github.link" class="flex items-center text-gray-700 hover:text-blue-500">{{ user.github.text }}</a></li>
+    <li><a [href]="user.malt.link" class="flex items-center text-gray-700 hover:text-blue-500">{{ user.malt.text }}</a></li>
+    <li><a [href]="user.linkedin.link" class="flex items-center text-gray-700 hover:text-blue-500">{{ user.linkedin.text }}</a></li>
+    <!-- <li><a href="#" class="flex items-center text-gray-700 hover:text-blue-500">{{ user.orcid }}</a></li> -->
+    <!-- <li><a href="#" class="flex items-center text-gray-700 hover:text-blue-500">{{ user.infojobs }}</a></li>
+  </ul>
+</aside> -->

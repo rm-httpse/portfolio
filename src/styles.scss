@@ -1,58 +1,39 @@
+@use "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Genos:ital,wght@0,100..900;1,100..900&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
-:root {
-    background-color: #ebeefd;
-    overflow: hidden;
-    // --font-primary: 'Quantico', sans-serif;
-    // --font-secondary: 'Quantico', sans-serif;
-    --font-primary: 'Genos', sans-serif;
-    --font-secondary: 'Genos', sans-serif;
-    --color-primary: #0000f4;
-    --color-secondary: #302790;
-    --color-terciary: #ebeefd;
-    --default-color: #333333;
-}
-
-body {
-    height: 100vh;
-}
-
-// /* Estilos para móviles pequeños (0 - 480px) */
-// @media (max-width: 480px) {
-//     /* Agrega aquí los estilos específicos para pantallas pequeñas */
-//   }
-  
-// /* Estilos para tablets (481px - 768px) */
-// @media (min-width: 481px) and (max-width: 768px) {
-// /* Agrega aquí los estilos específicos para tablets */
+// :root {
+//     background-color: #ebeefd;
+//     overflow: hidden;
+//     // --font-primary: 'Quantico', sans-serif;
+//     // --font-secondary: 'Quantico', sans-serif;
+//     --font-primary: 'Genos', sans-serif;
+//     --font-secondary: 'Genos', sans-serif;
+//     --color-primary: #0000f4;
+//     --color-secondary: #302790;
+//     --color-terciary: #ebeefd;
+//     --default-color: #333333;
 // }
 
-// /* Estilos para laptops y pantallas medianas (769px - 1280px) */
-// @media (min-width: 769px) and (max-width: 1280px) {
-// /* Agrega aquí los estilos específicos para laptops y pantallas medianas */
-// }
-
-// /* Estilos para pantallas grandes (1280px+) */
-// @media (min-width: 1281px) {
-// /* Agrega aquí los estilos específicos para pantallas grandes */
+// body {
+//     height: 100vh;
 // }
   
 
-.bg-primary {
-    background-color: var(--color-primary);
-}
+// .bg-primary {
+//     background-color: var(--color-primary);
+// }
   
-.bg-secondary {
-    background-color: var(--color-secondary);
-}
+// .bg-secondary {
+//     background-color: var(--color-secondary);
+// }
 
-.bg-terciary {
-    background-color: var(--color-terciary);
-}
+// .bg-terciary {
+//     background-color: var(--color-terciary);
+// }
 
-body {
-    font-family: var(--font-primary);
-    color: var(--default-color);
-    margin: 0;
-    padding: 0;
-}
+// body {
+//     font-family: var(--font-primary);
+//     color: var(--default-color);
+//     margin: 0;
+//     padding: 0;
+// }
