@@ -1,15 +1,86 @@
 import { Component } from '@angular/core';
 import { SidebarComponent } from "../sidebar/sidebar.component";
 import { CommonModule } from '@angular/common';
+import { CardComponent } from '../card/card.component';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-content',
-  imports: [CommonModule],
+  imports: [CommonModule, CardComponent],
   templateUrl: './content.component.html',
   styleUrl: './content.component.scss'
 })
 export class ContentComponent {
+  currentSection: string = '';
   content = {
+    boutme: {
+      mind: 'Vivo en Barcelona, España desde hace un año, tiempo en el cual tuve la oportunidad de conocer muchos lugares nuevos, experimentar y crecer tanto personal como profesionalmente. Durante este tiempo, también he podido reflexionar mucho, reviviendo las pasiones que desde pequeño he sentido, mientras al mismo tiempo abriendo mi mente a nuevos horizontes. Por mencionar otra cosa importante, puedo agregar que también siento que entiendo mucho mejor como funciona la vida real, y de los problemas que se enfrentan día a día en el país y en el mundo.',
+      creactivity: 'Desde muy temprana edad he sentido una afinidad por las matemáticas, demostrando fluidez en dicha materia y a todas las ramas relacionadas, lo cual de cierta forma moldeó mi forma y capacidad de pensar y analizar los problemas. Mis intereses pueden abordar una variedad de ámbitos, por nombrar algunos, puedo mencionar que soy aficionado a la relatividad y la física cuántica, me interesa el campo de las telecomunicaciones, la ciberseguridad, y múltiples lenguajes de programación.\n\nQuiero destacar que mis proyectos personales siempre estarán impulsados por mi creatividad e intereses, los cuales pueden ser muchos para mencionar, pero lo que sí puedo mencionar es que todos convergen a una misma finalidad que es, intentar hacer del mundo un lugar mejor para todos :)',
+      hobbies: 'Naturalmente mis hobbies también forman parte de mis intereses y son fundamentales, ya que en cierta forma mantienen viva mi creactividad, siguiendo historias y experiencias de todo tipo, constantemente abriéndome a nuevos horizontes.',
+      destiny: 'También disfruto mucho viajar y conocer nuevos destinos y culturas. Soy alguien que disfruta tanto el viaje como el destino.',
+      gamesList: [
+        {
+          name: 'Crash Bandicoot',
+          src: 'https://static.posters.cz/image/750/99518.jpg',
+        },
+        {
+          name: 'Ace Attorney',
+          src: 'https://m.media-amazon.com/images/I/71SrngbzT6L.jpg',
+        },
+        {
+          name: 'Yakuza: Like a Dragon',
+          src: 'https://wallpapercave.com/wp/wp8649388.jpg',
+        },
+        {
+          name: 'Death Stranding',
+          src: 'https://cdna.artstation.com/p/assets/images/images/025/990/496/large/litos-lopez-phone3.jpg?1587554640',
+        },
+        {
+          name: 'Sekiro: Shadows Die Twice',
+          src: 'https://preview.redd.it/glinebbvmtw21.jpg?auto=webp&s=718084cc963b848a9c0afa345dbf8dc09f1721dc',
+        },
+      ],
+      storiesList: [
+        {
+          name: 'Dragon Ball',
+          src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSigRIk85HsKZiS8hV7Ptj_PCYVdc7OaVYhJg&s',
+        },
+        {
+          name: 'Evangelion',
+          src: 'https://w0.peakpx.com/wallpaper/614/279/HD-wallpaper-eva-01-in-station-eva-eva01-evangelion-thumbnail.jpg',
+        },
+        {
+          name: 'Mr. Robot',
+          src: 'https://preview.redd.it/st0tjzqro3y41.png?width=1440&format=png&auto=webp&s=5b54592f2193cfd4e182af0aefc533f4c2e5b49f',
+        },
+        {
+          name: 'Perfect Blue',
+          src: 'https://i.pinimg.com/550x/03/b1/74/03b174ae8ff79cd5ccc4e6b25166c16b.jpg',
+        },
+        {
+          name: 'Everything everywhere all at once',
+          src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyd1o3udLMu0-zV9H6uEx-cGMetONh0HnPOg&s',
+        },
+      ],
+      destinyList: [
+        {
+          name: 'Mérida, Venezuela',
+          src: 'https://upload.wikimedia.org/wikipedia/commons/4/40/El_cruce_de_las_bandas._Merida..jpg',
+        },
+        {
+          name: 'Napoli, Italia',
+          src: 'https://www.civitatis.com/blog/wp-content/uploads/2024/02/shutterstock_732553141-scaled.jpg',
+        },
+        {
+          name: 'Japón',
+          src: 'https://www.advantour.com/img/japan/images/index.jpg',
+        },
+        {
+          name: 'Argentina',
+          src: 'https://ichef.bbci.co.uk/ace/ws/640/cpsprodpb/a4e2/live/524bca40-6921-11ee-99df-dd674d5e8274.png.webp',
+        },
+      ]
+    },
     CV: [
       {
         companyName: 'Apply Digital',
@@ -156,6 +227,14 @@ export class ContentComponent {
         }
       ]
     }
+  }
+
+  constructor(private route: ActivatedRoute) {}
+
+  ngOnInit() {
+    this.route.fragment.subscribe(fr => {
+      this.currentSection = fr || ''; // Guarda el fragmento (ej: 'cv', 'boutme', 'projects')
+    });
   }
 
   redirectTo(project: any) {

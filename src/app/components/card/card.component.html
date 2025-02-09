@@ -1,0 +1,16 @@
+
+<!-- banner container -->
+<div *ngIf="orientation === 'v'" class="w-60 h-100">
+  <!-- banner layout -->
+  <div class="bg-cover bg-center shadow-md rounded-lg w-full h-full bg-gray-200 flex flex-col justify-center items-start pt-5"
+  [ngStyle]="{'background-image': 'url(' + content.src + ')'}">
+  </div>
+</div>
+
+<div *ngIf="orientation === 'h'" class="w-100 h-60">
+  <!-- banner layout -->
+  <div class="bg-cover bg-center shadow-md rounded-lg w-full h-full bg-gray-200 flex flex-col justify-center items-start pt-5"
+  [ngStyle]="{'background-image': 'url(' + content.src + ')'}">
+  </div>
+</div>
+
