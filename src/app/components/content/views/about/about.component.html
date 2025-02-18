@@ -1,0 +1,27 @@
+<section class="w-full">
+  <h1 class="text-2xl font-bold mb-4">About me</h1>
+  <h2 class="text-2xl font-bold mb-4">Mentalidad</h2>
+  <p class="pr-4 mb-8">{{ content.boutme.mind }}</p>
+  <h2 class="text-2xl font-bold mb-4">Intereses, tendencias</h2>
+  <p class="pr-4 mb-8">{{ content.boutme.creactivity }}</p>
+  <h2 class="text-2xl font-bold mb-4">Hobbies</h2>
+  <p class="pr-4 mb-8">{{ content.boutme.hobbies }}</p>
+
+  <h2 class="text-2xl font-bold mb-4">Games</h2>
+  <div class="flex flex-row flex-wrap gap-4 mb-4">
+    <app-card *ngFor="let game of content.boutme.gamesList" [content]="game"></app-card>
+  </div>
+
+  <h2 class="text-2xl font-bold mb-4">Stories</h2>
+  <div class="flex flex-row flex-wrap gap-4">
+    <app-card *ngFor="let story of content.boutme.storiesList" [content]="story"></app-card>
+  </div>
+  
+  <h2 class="text-2xl font-bold my-4">Destinos</h2>
+  <p class="pr-4 mb-8">{{ content.boutme.destiny }}</p>
+
+  <h2 class="text-2xl font-bold mb-4">Proximos viajes:</h2>
+  <div class="flex flex-row flex-wrap gap-4">
+    <app-card *ngFor="let destiny of content.boutme.destinyList" [content]="destiny" [orientation]="'h'"></app-card>
+  </div>
+</section>

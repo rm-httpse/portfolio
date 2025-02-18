@@ -1,15 +1,13 @@
-import { Component } from '@angular/core';
-import { SidebarComponent } from "../sidebar/sidebar.component";
 import { CommonModule } from '@angular/common';
-import { ActivatedRoute, RouterOutlet } from '@angular/router';
+import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-content',
-  imports: [CommonModule, RouterOutlet],
-  templateUrl: './content.component.html',
-  styleUrl: './content.component.scss'
+  selector: 'app-home',
+  imports: [CommonModule],
+  templateUrl: './home.component.html',
+  styleUrl: './home.component.scss'
 })
-export class ContentComponent {
+export class HomeComponent {
   content = {
     boutme: {
       mind: 'Vivo en Barcelona, España desde hace un año, tiempo en el cual tuve la oportunidad de conocer muchos lugares nuevos, experimentar y crecer tanto personal como profesionalmente. Durante este tiempo, también he podido reflexionar mucho, reviviendo las pasiones que desde pequeño he sentido, mientras al mismo tiempo abriendo mi mente a nuevos horizontes. Por mencionar otra cosa importante, puedo agregar que también siento que entiendo mucho mejor como funciona la vida real, y de los problemas que se enfrentan día a día en el país y en el mundo.',
@@ -227,5 +225,4 @@ export class ContentComponent {
     }
   }
 
-  constructor() {}
 }

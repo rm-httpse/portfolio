@@ -3,44 +3,38 @@ import { NavbarComponent } from "./components/navbar/navbar.component";
 import { ContentComponent } from "./components/content/content.component";
 import { FooterComponent } from "./components/footer/footer.component";
 import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { SanityService } from './services/sanity.service';
+import { environment } from './../environments/environment';
+import { Observable } from 'rxjs';
+import { Store } from '@ngrx/store';
+import { CommonModule } from '@angular/common';
+import { ContentActions } from './store/content.actions';
+
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
-  imports: [NavbarComponent, ContentComponent, FooterComponent, SidebarComponent]
+  imports: [CommonModule, NavbarComponent, ContentComponent, FooterComponent, SidebarComponent]
 })
 export class AppComponent {
-  @ViewChildren('info') sections!: QueryList<ElementRef>;
-  @ViewChild('main') main!: ElementRef;
-  @ViewChild('carousel') carousel!: ElementRef;
-  
-  isScrolling: boolean = false;
-  curr = 0;
+  content$: Observable<any>
 
-  ngAfterViewInit() {
-    // Accedemos a los elementos y cambiamos el color de fondo
-    console.log(this.sections)
-    console.log(this.main)
+  constructor(
+    private sanity: SanityService,
+    private store: Store<{ content: number }>) {
+    this.content$ = store.select('content');
   }
 
-  goToSection(index: number) {
-    if (index >= 0 && index < this.sections.length && !this.isScrolling) {
-      this.isScrolling = true;
-      this.curr = index;
-      this.carousel.nativeElement.style.transform = `translateY(-${100 * index}%)`;
-      
-      setTimeout(() => { this.isScrolling = false; }, 1000); // Evita scrolls rápidos
-    }
+  ngOnInit() {
+    this.sanity.fetchData().then((data) => {
+      console.log('Data: ');
+      console.log(data);
+    });
   }
 
-  onScroll(e: WheelEvent) {
-    if (e.deltaY > 0) {
-      this.goToSection(this.curr + 1);
-      console.log('parriba');
-    } else {
-      this.goToSection(this.curr - 1);
-      console.log('pabajo');
-    }
+  setContent(data: any) {
+    this.store.dispatch(ContentActions.retrieve(data));
   }
 }
 
