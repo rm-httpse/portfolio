@@ -14,7 +14,7 @@ export class NavbarComponent {
     this.navOptions = {
       tabs: [
         { title: 'CV', link: '#' },
-        { title: 'About me', link: '/about' },
+        // { title: 'About me', link: '/about' },
         { title: 'Projects', link: '/projects' }
       ],
     }

@@ -80,28 +80,27 @@ export class HomeComponent {
     CV: [
       {
         companyName: 'Apply Digital',
-        role: 'Full-stack developer',
+        role: 'Fullstack developer',
         period: 'Aug 2021 - Jul 2023',
         activities: [
-          'Full-stack development of technological solutions for multiple projects (mainly for the technological sector)',
-          'Structured implementation of the front-end using the atomic design methodology and the integration of Contentful as a CMS.',
-          'Development of a back-end application responsible for orchestrating a series of processes, utilizing AWS technologies to ensure workflow integrity, scalability, and proper operation.',
+          'Fullstack development of technological solutions for multiple projects (mainly for the technological sector)',
+          'Structured implementation of the frontend using the atomic design methodology and the integration of Contentful as a CMS.',
+          'Development of a backend application responsible for orchestrating a series of processes, utilizing AWS technologies to ensure workflow integrity, scalability, and proper operation.',
           'Tech Stack: TypeScript, React, Next.js, Angular, NestJS, Tailwind, AWS (DynamoDB, Lambda, Step Functions, API Gateway), Contentful, Git, Serverless.',
         ]
       },
       {
         companyName: 'Waku Casa de Software',
-        role: 'Front-end Developer',
+        role: 'Frontend Developer',
         period: 'Feb 2021 - Aug 2021',
         activities: [
-          'Development on the interface and logic for an app within the financial sector, focusing on',
-          'building modern, functional and responsive UIs (for both desktop and mobile). Introduction to CI/CD.',
+          'Development on the interface and logic for an app within the financial sector, focusing on building modern, functional and responsive UIs (for both desktop and mobile). Introduction to CI/CD.',
           'Tech Stack: TypeScript, React, React Native, Tailwind, Redux, Git, Github, Github Pipelines, Kanban.',
         ]
       },
       {
         companyName: 'BINWUS',
-        role: 'Full-stack developer',
+        role: 'Fullstack developer',
         period: 'Sept 2019 - Jan 2021',
         activities: [
           'Active participation as a software developer in the company, contributing to the design, development, and implementation of multiple internal and external projects.',
