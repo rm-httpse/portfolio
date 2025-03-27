@@ -15,6 +15,7 @@ export class NavbarComponent {
       tabs: [
         { title: 'CV', link: '#' },
         // { title: 'About me', link: '/about' },
+        { title: 'Tech Stack', link: '/stack' },
         { title: 'Projects', link: '/projects' }
       ],
     }

@@ -1,0 +1,12 @@
+<section class="w-full flex align-center justify-center">
+  <div class="max-w-3xl">
+    <div *ngFor="let category of skills" class="p-4 mb-8 rounded-lg shadow-md w-full">
+      <h3 class="text-lg font-semibold mb-2">{{ category.name }}</h3>
+      <div class="flex flex-wrap gap-2">
+        <span *ngFor="let item of category.items" class="bg-gray-200 px-3 py-1 rounded-full text-sm shadow-xs">
+          {{ item }}
+        </span>
+      </div>
+    </div>
+  </div>
+</section>
