@@ -111,6 +111,12 @@ export class HomeComponent {
     ],
     education: [
       {
+        schoolName: 'Fundación Esplai - Barcelona',
+        period: 'Ene 2025 - Actualidad',
+        degree: 'Bootcamp: Programación con Javascript y React (376h)',
+        comments: []
+      },
+      {
         schoolName: 'Universidad Rafael Urdaneta',
         period: '2016 - 2020',
         degree: 'Computer Engineering',

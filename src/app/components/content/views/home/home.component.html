@@ -1,7 +1,8 @@
 <section class="w-full flex align-center justify-center">
-  <div class="max-w-3xl">
-    <h1 class="text-2xl font-bold mb-4">CV</h1>
-    <h2 class="text-xl font-semibold">Work Experience</h2>
+  <div class="max-w-3xl font-light">
+    <div class="border-b max-w-80">
+      <h2 class="text-lg font-semibold">WORK EXPERIENCE</h2>
+    </div>
       <ul class="text-gray-700 mb-4">
         <li *ngFor="let cv of content.CV" class="list-none">
           <span class="w-97/100 inline-flex items-center justify-between font-bold pt-4">
@@ -14,21 +15,20 @@
         </li>
       </ul>
 
-    <h2 class="text-xl font-semibold mt-6 mb-2">Education</h2>
+    <div class="border-b max-w-80">
+      <h2 class="text-lg font-semibold mt-8">EDUCATION</h2>
+    </div>
     <ul class="text-gray-700 mb-4">
       <li *ngFor="let ed of content.education">
-        <span class="w-97/100 inline-flex items-center justify-start font-bold pt-4">
-          <span>{{ ed.schoolName + ', ' + ed.degree + ', ' + ed.period }}</span>
+        <span class="w-97/100 inline-flex items-center justify-between font-bold pt-4">
+          <span>{{ ed.degree }}</span>
+          <span>{{ ed.period }}</span>
         </span>
+        <span>{{ ed.schoolName }}</span>
         <ul>
           <li *ngFor="let comment of ed.comments" class="list-disc list-inside mx-2 my-2 text-gray-600 text-sm">{{ comment }}</li>
         </ul>
       </li>
-    </ul>
-
-    <h2 class="text-xl font-semibold mt-6 mb-2">Tech Stack</h2>
-    <ul class="list-disc list-inside text-gray-700 mb-4">
-      <li *ngFor="let skill of content.skills">{{ skill }}</li>
     </ul>
   </div>
 </section>
